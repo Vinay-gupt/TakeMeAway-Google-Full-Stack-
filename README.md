@@ -7,10 +7,6 @@ npm run dev (To start frontend)
 Runs the app in the development mode.
 Open (http://localhost:5173/) to view it in the browser.
 
-npm start (To start backend) (https://github.com/sparshbarolia/Takemeaway-backend)
-Runs the app in the development mode.
-Open (http://localhost:8000) to view it in the browser.
-
                                           HOME PAGE
 This website asks for the access to your current location which is then used to show you nearby places
 You can then navigate to various categories and select one
