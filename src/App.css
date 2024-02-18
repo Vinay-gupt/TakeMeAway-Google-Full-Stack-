@@ -1,0 +1,287 @@
+body{
+  /* background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%); */
+  background-color: honeydew;
+}
+
+.shadow{
+  box-shadow: 11px 13px 24px -1px rgba(0,0,0,0.64);
+}
+
+.flex-col{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.custom-link {
+  text-decoration: none;
+  color: inherit;
+  width: 100%;
+}
+
+/* **********************HOME PAGE*************************** */
+
+.search-home-container{
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+}
+
+.home-single-card{
+  background-color: rgb(9, 39, 6);
+  border-radius: 5px;
+  margin: 1rem ;
+}
+
+.home-single-card:hover{
+  background-color: black;
+  transform: translateY(-10px);
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in;
+}
+
+.home-img{
+  border-radius: 5px;
+}
+
+.home-card-text p{
+  color: rgb(255, 255, 255);
+  margin: 5px;
+}
+
+/* ********************ALLplaces page**************** */
+
+/* .all-places-card:hover{
+  background-color: rgb(226, 200, 165);
+  transform: translateY(-10px);
+  transition-duration: 0.4s;
+  transition-timing-function: ease-in;
+} */
+
+.map-button{
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+  z-index: 200;
+}
+
+.map-button{
+	-webkit-animation: slide-top 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite alternate forwards;
+	        animation: slide-top 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite alternate forwards;
+}
+
+@-webkit-keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-2rem);
+            transform: translateY(-2rem);
+  }
+}
+@keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-2rem);
+            transform: translateY(-2rem);
+  }
+}
+
+.map-card:hover{
+  transform: scale(1.1);
+}
+
+.map-card{
+  transition: all 0.3s ease-in;
+}
+
+.all-places-card{
+  /* border: 2px solid red; */
+  position: relative;
+  padding: 0.5rem;
+  height: 23rem;
+  width: 20rem;
+  margin: 1rem;
+  background: #fff;
+  cursor: pointer;
+  transition: all 120ms;
+  box-shadow: 0px 1px 13px rgba(0,0,0,0.1);
+  text-decoration: none;
+  /* padding: 0.5em; */
+}
+
+.all-places-card::after {
+  content: "Explore More";
+  padding-top: 1.25em;
+  padding-left: 1.25em;
+  position: absolute;
+  left: 0;
+  /* bottom: -60px; */
+  background: #00AC7C;
+  color: #fff;
+  height: 4rem;
+  width: 100%;
+  transition: all 80ms;
+  font-weight: 600;
+  text-transform: uppercase;
+  opacity: 0;
+  z-index: 3;
+}
+
+.all-places-card:hover::after {
+  bottom: 0;
+  opacity: 1;
+}
+
+.all-places-card:active {
+  transform: scale(0.98);
+}
+
+.all-places-card:active::after {
+  content: "Lets Go!";
+  height: 3rem;
+}
+
+.all-places-image-container{
+  padding: 0.5rem;
+  width: 100%;
+  height: 90%;
+}
+
+.all-places-image{
+  width: 100%;
+  height: 100%;
+}
+
+.all-places-card-content{
+  width: 96%;
+}
+
+.all-places-card-title{
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+/* ****************MAP BUTTON***************** */
+
+.App1 {
+  transition: all 0.5s ease-in;
+  /* height: 60vh; */
+  /* width: 100%; */
+}
+
+.map-container {
+  height: 60vh;
+  width: 100%;
+}
+
+/* ****************DETAILS PAGE****************** */
+
+@media only screen and (min-width: 1000px) {
+  .detail-carousel{
+    width: 55% ;
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  .detailed-address{
+    width: 60% ;
+  }
+}
+
+/* *************MODAL************** */
+/* Modal styles */
+.modal {
+  display: flex;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  border: 1px solid #888;
+  width: 80vw;
+  height: 79vh;
+  /* max-width: 600px; */
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+}
+
+.cssbuttons-io-button {
+  background: #57b454;
+  color: white;
+  font-family: inherit;
+  padding: 0.35em;
+  padding-left: 1.2em;
+  font-size: 17px;
+  font-weight: 500;
+  border-radius: 0.9em;
+  border: none;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  box-shadow: inset 0 0 1.6em -0.6em #57b454;
+  overflow: hidden;
+  position: relative;
+  height: 2.8em;
+  padding-right: 3.3em;
+  cursor: pointer;
+}
+
+.cssbuttons-io-button .icon {
+  background: white;
+  margin-left: 1em;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.2em;
+  width: 2.2em;
+  border-radius: 0.7em;
+  box-shadow: 0.1em 0.1em 0.6em 0.2em #57b454;
+  right: 0.3em;
+  transition: all 0.3s;
+}
+
+.cssbuttons-io-button:hover .icon {
+  width: calc(100% - 0.6em);
+}
+
+.cssbuttons-io-button .icon svg {
+  width: 1.1em;
+  transition: transform 0.3s;
+  color: #7b52b9;
+}
+
+.cssbuttons-io-button:hover .icon svg {
+  transform: translateX(0.1em);
+}
+
+.cssbuttons-io-button:active .icon {
+  transform: scale(0.95);
+}
